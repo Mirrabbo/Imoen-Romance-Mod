@@ -1,0 +1,74 @@
+MAIN
+Irenicus Dungeon 2 talks
+3 Dreams
+6 Love talks + slayer dream talk
+Spellhold join
+Underdark 5 facet imprison
+Killing Adalon
+Exitting Adalon cave she alive
+Phaere sleep talk
+Underdark Exit Prompt
+Random Camp prompt
+Campfire scene
+Party after romance resolution talk
+Romance private talk
+Bodhi kidnap
+Last lovetalk
+Suldanesselar enter
+Hell trial selfish with aerie
+
+QUESTS
+Kill Dragon 1 and 3
+Meet Cowled Witzard
+Acorn quest at windspear hills
+Meet Drizzt
+Meet drizzt 2
+Druid grove, Jaheira duels falon
+See Circus tent in Athkatla
+Planar sphere subdue lavok
+Unseeing eye after listening to Gaal diatribe
+Gong quest
+
+MISC
+Bracelet
+Aerie Imoen
+Fortune Teller
+Lilarcor
+Salvanas
+Strongholds
+
+BANTERS
+Good-Evil alignment
+Lawful alignment
+class
+money
+reputation
+Gaxx ring
+Party banter on your romanced
+
+
+PID
+Phaere talk
+Quality Times
+
+QUALITY TIMES
+TimeGT(9)
+!TimeGT(18)
+
+TimeGT(18)
+!TimeGT(DUSK_END)
+
+OR(7)
+	Time(23)
+	Time(MIDNIGHT)
+	Time(1)
+	Time(2)
+	Time(3)
+	Time(4)
+	Time(5)
+
+TimeGT(5)
+!TimeGT(9)
+
+
+

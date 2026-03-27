@@ -1,0 +1,109 @@
+MAIN
+Imoen Summon First Time
+Sleep pocketplane
+Fire giant lair
+Try kill Yaga without heart
+Gorion Wrath Talk
+Solar Past Talk
+Yagashura Dead battlefield talk
+Senda priestess
+Abazigal lair
+Solar Second post-Talk
+Solar third post-talk
+Solar fourth post-talk
+Final Conversation
+
+CHALLENGE TALK
+First
+Second
+Third
+Fourth
+Fifth
+
+BHAAL TAINT TALK
+First
+Seocnd
+Third
+Final outcome talk (ravager/control/reject)
+
+BRACELET
+Laz talk
+Laz greeting Amkrethran
+Laz 2nd talk
+Laz 3rd talk
+Sorenthis freed
+Bracelet kept
+
+MISC
+Cespenar talk Imoen
+Female PC sleep talk
+Running out of money after saradush sacked
+Banter Vic romance
+Banter Jaheira romance
+Banter Aerie romance
+Saradush inn
+Saradush Peltje
+Saradush gnome bhaalspawn
+Saradush Farielle
+Saradush n00b trollop
+Saradush Volo
+Saradush Vampire manwhore
+Saradush immediate area leaving town, merchant north
+Amkethran saemon
+Amkethran saves asana
+Amkethran sarevok barkeep
+Amkethran Inn
+Viconia 'slave' banter
+Haerdalis  chessy comeon
+Cernd 8 years old banter
+Keldron ring banter
+Sarevok becoming lord of murder banter
+Sarevok im soul
+Sarevok extended meeting
+
+PID
+BUSY Saradush razed
+BUSY siege Camp before slaughter
+BUSY siege camp / oasis
+BUSY combat
+Quality Times after 2nd challenge
+Quality times after abaz/sendai dead
+Brief Public Displays of Affection
+Marriage talk
+Pregnancy talk
+Torture talk
+worshipper
+Slayer-Ravager-Resisting the Taint
+ImoenRomanceActive 3 talk
+
+PID Imoen Self
+Talking heads
+Before facing Illasera
+Before the first test
+After the test, talked to sarevok, he is gone
+Talked to Sarevok, not in party but in area
+Pocket plane, Talked to Sarevok, he's in party
+Saradush, Tavern
+Saradush, other rooms, not catacombs
+Saradush, underground catacombs
+Saradush, Gromnir's chambers
+Pocket Plane, just killed Gromnir
+You just escaped Saradush, wilderness
+Forest of Tyr
+Marching mountains
+Fire Giants Lair
+Yaga-Shura's Chamber
+Siege Camp
+Siege Camp (after killing Yaga-Shura)
+Pocket Plane, After killing Yaga-Shura, before the test
+The Oasis
+Arrival at Amkethran
+Woods before Sendai's enclave
+Woodcutter's house
+Sendai's Enclave
+Abazigal's entrance enclave
+Abazigal's lair, main entrance
+Abazigal's lair, anywhere but Abazigal's inner sanctum or the previous two
+
+IMOEN-Aerie
+7 lovetalks

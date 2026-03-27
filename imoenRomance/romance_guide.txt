@@ -1,0 +1,183 @@
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+R O M A N C E  G U I D E :
+
+this is a guide for those who are having trouble romancing imoen.
+
+
+SOA
+
+1. Dreams
+First dream occurs one-day in-game time (ie you can inn sleep to push it foward) after the 2nd jon irenicus dream.
+ImoenDreamRomance1 is the global timer
+HadImoenDreamRomance1 =1 when the dream finishes
+
+Second dream occurs roughly 3.5 in-game time days after the first dream.
+ImoenDreamRomance2 is the global timer
+HadImoenDreamRomance2 =1 when the dream finishes
+The second dream is necessary to occur for the romance to actually kick off
+
+Third dream occurs roughly 4 in-game time days after the first dream.
+ImoenDreamRomance3 is the global timer
+HadImoenDreamRomance3 =1 when the dream finishes
+
+2. Imoen Rejoins
+After imoen rejoins, she has her intro talk with you, here you basically just have to not piss her off.
+
+3. Lovetalks
+The first occurs 20 seconds after imoen rejoins.
+the rest occur 40 minutes real-game time (as in the amount of time you actually play, inn-sleeping wont do anything) after each other.
+
+There are 6 love-talks prior to the romance concluding that need to be seen, and 1 after that is optional.
+The globals are
+MRLoveTalk=1,3,5,7,9,11
+MRImoenLovetalkTimer is the global timer
+No lovetalks occur during the sahuagin city but they do occur everywhere else that isn't a dungeon (including the underdark, which is flagged as a dungeon).
+
+All these talks if you pick the wrong option, ImoenRomanceActive gets set to 3 (so you failed the romance) it should always be 1 here.
+
+4. Underdark Exit
+Depending on how far you are on Lovetalks either you aren't ready for the campfire scene or you are (depends if its higher then 9).
+
+If not you can just continue playing the game and once you've had enough lovetalks Imoen will prompt you to camp.
+
+At the end, this global should be set MRSleptImoen=1, if not you failed the event here
+
+5. After one in-game day of bodhi being killed, she will talk to you to be alone, basically send all your other npc's away from Line of sight and force talk her.
+
+This is the last step and ImoenRomanceActive=2 means you succeeded.
+
+After this, flirts will be activated and you can talk to Imoen and do random stuff.
+
+
+
+TOB
+
+Since the romance has been decided in SOA, what you do here merely determines what ending you get.
+Largely how good of an ending you can get is determined by a variable IRTLoveMeter which increased/decreased depending on how you respond to talks, to imoen as well as your final choice during Solar talk.
+This guide largely details how to get these points.
+
+
+Imoen Solar past event
+~I'm glad you were there with me. You always know what to say to make me feel better, love.~ +2
+~I'm glad you were there with me. You always know what to say to make me feel better.~ +2
+~I'm glad things worked out the way they did. I can't imagine life without you.~ +3
+~I'm glad things worked out the way they did. I couldn't get through all this without you.~ +3
+
+Imoen Solar five event (when all five have been killed)
+~I'm wondering what you're going on about. I lost consciousness, just like you, and now we're awake again. I don't know what's happening.~ -4
+~I'm tired of your questions, Imoen. Be quiet.~ -5
+~Yes, absolutely. I will claim it all, when the time comes.~ -2
+~Perhaps. It depends on whether I can turn it into a force for good.~ +2
+
+imoen first time sleep pocketplane
+~I always feel at home with you in my arms, Imoen.~ +1
+~You talk far too much.~ -2
+~I have told you not to talk to me unless it's strictly necessary. Shut up and get ready.~ -2
+
+gorionwrath scene
+~(Shake your head.) We've been close friends nearly all our lives. When Gorion died, you were the first to help. We've both been tortured and scarred by a madman. We are the two Bhaalspawn that stand in the way of the Five, just like we've stood together through countless battles. I think there's nothing in the world more "right" than what we have between us.~ +3
+if your a girl, joking around about incest then ask imoen to hurt you being bad +10
+
+Post-Challenge Talks
+~Awful? I'm sad it's over. I could have used some more bloodshed.~ -1
+~If I had a choice, I'd rather every one of our enemies did that. I don't want you to ever be at risk.~ +1
+~Don't care. Let's move on.~ -1
+~Nothing is worth the torture I've been through to get here. If I could choose, I would relive my life without the divine heritage.~ -5
+
+Bhaal taint talks
+Any instructions on how to handle taint +1
+Any dismissive reply is usually -5 to -10
+
+Bracelet
+refusing to help Sorenthis -7
+
+imoen saves asana
+~I hope you realize that, had they attacked, you'd have been on your own.~ -10
+
+you kill north forest merchant
+-3
+
+inn spend time scenes
++2/3
+
+pid torture
+if talk about knives (random) +1
+
+pid pregnancy
++1
+~I won't lie, I'm not certain. But I think I can get used to the idea.~ -5
+~Does it even matter? We might be dead tomorrow. Forget about the whole thing and let's live day by day.~  -5
+
+pid marriage
+most choices end in +2/5
+bad replies -2
+
+pid Brief Public Displays of Affection (repeatable)
+any choice +1
+
+quality time (repeatable)
+really any sex/kiss choice +1
+
+
+ENDING
+
+More technical information of how the endings work is in '\tra\english\setup.tra' and '\TOB\finalConversation\FinalConversation.d
+below is a copy of the info in setup.tra
+
+//Variables below are default choices, it is possible to ascend AND THEN tell imoen to stay mortal even if you qualify for her to ascend with you, in which case they go to Imoen Left Behind
+// Ascending as equals	//ImoenRomanceActive=2 && IRTLoveMeter>30
+	// Good or Neutral player equal gods
+	// Evil Player equal gods
+// Ascending as loved Handmaiden	//ImoenRomanceActive=2 && IRTLoveMeter>12 && IRTLoveMeter<30 && (IRTImoenIsRavager=1 or IRTImoenControlsSlayer=1) && IRTCorruptImoen>6
+	// Good or Neutral Player
+	// Evil Player
+// Ascending as sibling Handmaiden	//ImoenRomanceActive!=2 OR IRTLoveMeter>2 && (IRTImoenIsRavager=1 or IRTImoenControlsSlayer=1) && IRTCorruptImoen>6
+	// Good or Neutral Player
+	// Evil Player @121
+// Imoen Left Behind 
+	// Madly In Love	//ImoenRomanceActive=2 && IRTLoveMeter>30
+		// Good Player
+		// Lawful Neutral Player
+		// True Neutral Player
+		// Chaotic Neutral Player
+		// Evil Player
+		// Good / Neutral Player with Aerie friendship
+		// Evil Player with Aerie friendship
+	// Regular Romance	//ImoenRomanceActive=2
+		// Aerie Friendship
+		// No Aerie Friendship
+	// Not Romanced, Aerie Friendship, player ascended @212	//ImoenRomanceActive!=2 && IRTCorruptImoen<7 && IRTImoenIsRavager!=1 && IRTImoenControlsSlayer!=2
+	// Not Romanced, Aerie Love, player ascended @213 //ImoenRomanceActive!=2 && IRTCorruptImoen<7 && IRTImoenIsRavager!=1 && IRTImoenControlsSlayer!=2
+// Player Stays Mortal
+	// Madly in Love	//ImoenRomanceActive=2 && IRTLoveMeter>30
+		// Good Player, No Aerie, No Marriage
+		// Good Player, No Aerie, Marriage
+		// Good Player, Aerie, No Marriage
+		// Good Player, Aerie, Marriage
+		// Neutral Player, No Aerie, No Marriage
+		// Neutral Player, No Aerie, Marriage
+		// Neutral Player, Aerie, No Marriage
+		// Neutral Player, Aerie, Marriage
+		// Evil Player, No Aerie, No Marriage
+		// Evil Player, No Aerie, Marriage
+		// Evil Player, Aerie, No Marriage
+		// Evil Player, Aerie, Marriage
+	// Regular Romance	//if ImoenRomanceActive=2
+		// Good Player, No Aerie, No Marriage
+		// Good Player, No Aerie, Marriage
+		// Good Player, Aerie, No Marriage
+		// Good Player, Aerie, Marriage
+		// Neutral Player, No Aerie, No Marriage
+		// Neutral Player, No Aerie, Marriage
+		// Neutral Player, Aerie, No Marriage
+		// Neutral Player, Aerie, Marriage
+		// Evil Player, No Aerie, No Marriage
+		// Evil Player, No Aerie, Marriage
+		// Evil Player, Aerie, No Marriage
+		// Evil Player, Aerie, Marriage
+	// Not Romanced, Aerie Love, mortal player	//ImoenRomanceActive!=2 && IRTCorruptImoen<7 && IRTImoenIsRavager!=1 && IRTImoenControlsSlayer!=2
+	// Imoen was kicked out and friended Aerie is still in party 	//!InParty("Imoen2") !Global("AerieRomanceActive","GLOBAL",2) Global("IRTAerieImoenLeft","GLOBAL",1)
+	// Not romanced, Aerie Friendship, mortal player	//ImoenRomanceActive!=2 && IRTCorruptImoen<7 && IRTImoenIsRavager!=1 && IRTImoenControlsSlayer!=2
+
+//vanila	//ImoenRomanceActive!=2 && IRTCorruptImoen<7 && IRTImoenIsRavager!=1 && IRTImoenControlsSlayer!=2 && !InParty("Aerie")
